@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script type="text/javascript">
+function onclickf(){
+var a= document.getElementById("exampleInputEmail1").value.trim();
+var b= document.getElementById("exampleInputPassword1").value.trim();
+if(a==null||a==""||b==null||b==""){
+alert("both the fields are required");
+return false;
+}else{
+  return true;
+}
+
+
+}
+  </script>
+
+
+  </head>
+  <body>
+
+<div class="colo">
+  <div class="f">
+    <div class="container vc">
+      <h1 class="title m-2">Chat hub!!!</h1>
+      <form method="get" action="/" onsubmit="return onclickf()">
+      <div class="form-group">
+        <input type="text" class="form-control" name="username" id="exampleInputEmail1" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control"  name="room" id="exampleInputPassword1" placeholder="Room" required>
+      </div>
+
+      <button type="submit" class="colorrr">Submit</button>
+    </form>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  </body>
+</html>

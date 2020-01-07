@@ -1,0 +1,79 @@
+body{
+  background-color: #1D1C22 !important;
+}
+
+li{
+  list-style-type: none;
+  color: white;
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-bottom: .3rem;
+}
+#input-id{
+  width: 95%;
+  padding: .5rem;
+}
+.foooter{
+  border-top: 1px solid green;
+position: fixed;
+bottom: 0;
+  margin-top: 1rem;
+   width: 80%;
+   background-color: #0F0F0F;
+   padding: 1rem;
+  height: 15%;
+  right: 0;
+}
+#submit-btn{
+  background-color: firebrick;
+  color: white;
+  border-radius: 50%;
+padding: .5rem;
+border: 2px solid #1D1C22;
+
+margin-left: .2rem;
+
+}
+.onlineuser{
+position: absolute;
+ height: 100%;
+  width: 19%;
+  border: 1px solid white;
+  overflow: auto;
+  overflow-x: hidden;
+
+}
+.classname:before{
+list-style: none;
+content: "\2022";
+ color: lightgreen;
+ font-weight: bold;
+ display: inline-block;
+ width: 1rem;
+ height: 1rem;
+ margin-left: -.5rem;
+ margin-right: -.5rem;
+
+}
+.online{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+.mainc{
+ border: 1px solid indigo;
+ height: 83%;
+ position: absolute;
+overflow: scroll;
+ width: 80%;
+ right: 0;
+
+ overflow-x: hidden;
+
+}
+@media only screen and (max-width: 1200px) , screen and (max-height: 450px)  {
+#input-id{
+  width: 80%;
+}
+
+}
