@@ -368,7 +368,7 @@ var jsonobj=[
     "Name:": "Chhaya",
     "Roll No.:": 1706127,
     "What describes you the best?": "Creative",
-    "What is house DENVER to you?": "Virtual house away from college is Denver. We don't feel like we are really not in college together,just the medium has changed.we have conversations together ,discuss end number of topics,daily updates and our moderator Shreyansh has big role in making this place happening.",
+    "What is house DENVER to you?": "Virtual house away from college is Denver. We don't feel like we are really not in college together,just the medium has changed. Our moderator Shreyansh has big role in making this place happening.",
     "Picture:": "https://drive.google.com/open?id=1vlzVR81oOdC_cH4ZdoM0bqPlADZ8PvIN"
   },
   {
