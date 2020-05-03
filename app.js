@@ -18,66 +18,6 @@ app.get("/",function(req,res){
   res.render('chat');
 });
 
-
-
-app.get("/index",function(req,res){
-  res.render('index');
-});
-
-
-app.get("/:name",function(req,res){
-  res.redirect('index');
-});
-
-
-io.on('connection',function(socket){
-
-
-
-socket.on('join',(ob,callback)=>{
-  if(ob!=null){
-    if(ob.room!='undefined'||ob.name!='undefined'){
-
-
-    socket.join(ob.room[0].split(' ').join(''));
-    users.removeUser(socket.id);
-
-    users.addUser(socket.id,ob.username[0],ob.room[0].split(' ').join(''));
-
-
-    io.to(ob.room[0].split(' ').join('')).emit('updateUsersList',users.getUserList(ob.room[0].split(' ').join('')));
-    socket.emit('newMessage',generateMessage('Admin',"Welcome to the chat app"));
-
-    let user=users.getUser(socket.id);
-    if(user){
-      socket.broadcast.to(user.room).emit('newMessage',generateMessage('Admin', ob.username + " joined the chat"));
-
-    }
-    }
-  }
-
-});
-
-  socket.on('createMessage',function(message){
-    let user=users.getUser(socket.id);
-    if(user){
-      io.to(user.room).emit('newMessage',generateMessage(user.name,message.text));
-    }
-  });
-
-
-  socket.on('disconnect',()=>{
-let user=users.removeUser(socket.id);
- if(user){
-   io.to(user.room).emit('updateUsersList',users.getUserList(user.room));
-   io.to(user.room).emit('newMessage',generateMessage("Admin", user.name + " has left the chat"));
- }
-
-
-  });
-
-});
-
 var jsonobj=[
   {
     "Timestamp": "5/1/2020 18:38:49",
@@ -587,6 +527,66 @@ var jsonobj=[
 app.get('/getjson',function(req,res){
   res.send(jsonobj);
 });
+
+app.get("/index",function(req,res){
+  res.render('index');
+});
+
+
+app.get("/:name",function(req,res){
+  res.redirect('index');
+});
+
+
+io.on('connection',function(socket){
+
+
+
+socket.on('join',(ob,callback)=>{
+  if(ob!=null){
+    if(ob.room!='undefined'||ob.name!='undefined'){
+
+
+    socket.join(ob.room[0].split(' ').join(''));
+    users.removeUser(socket.id);
+
+    users.addUser(socket.id,ob.username[0],ob.room[0].split(' ').join(''));
+
+
+    io.to(ob.room[0].split(' ').join('')).emit('updateUsersList',users.getUserList(ob.room[0].split(' ').join('')));
+    socket.emit('newMessage',generateMessage('Admin',"Welcome to the chat app"));
+
+    let user=users.getUser(socket.id);
+    if(user){
+      socket.broadcast.to(user.room).emit('newMessage',generateMessage('Admin', ob.username + " joined the chat"));
+
+    }
+    }
+  }
+
+});
+
+  socket.on('createMessage',function(message){
+    let user=users.getUser(socket.id);
+    if(user){
+      io.to(user.room).emit('newMessage',generateMessage(user.name,message.text));
+    }
+  });
+
+
+  socket.on('disconnect',()=>{
+let user=users.removeUser(socket.id);
+ if(user){
+   io.to(user.room).emit('updateUsersList',users.getUserList(user.room));
+   io.to(user.room).emit('newMessage',generateMessage("Admin", user.name + " has left the chat"));
+ }
+
+
+  });
+
+});
+
+
 server.listen(process.env.PORT||3000,function(){
   console.log("server is started on port 3000");
 });
