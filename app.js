@@ -36,6 +36,14 @@ var jsonobj=[
     "Picture:": "https://drive.google.com/open?id=1M-XrXkHhBIXL4Lz5ToRfFvJimp27TdyW"
   },
   {
+    "Timestamp": "5/1/2020 18:38:49",
+    "Name:": "Rudraksh Dixit",
+    "Roll No.:": 1705813,
+    "What describes you the best?": "Positive",
+    "What is house DENVER to you?": "Team",
+    "Picture:": "https://drive.google.com/open?id=1BDKXWIkl1vnxxtQ6P-KEqsbKTPPC0fP7"
+  },
+  {
     "Timestamp": "5/1/2020 18:39:20",
     "Name:": "Kuntalika Banerjee",
     "Roll No.:": 1704437,
@@ -359,7 +367,7 @@ var jsonobj=[
     "Timestamp": "5/1/2020 19:13:04",
     "Name:": "Chhaya",
     "Roll No.:": 1706127,
-    "What describes you the best?": "I am result oriented and I strive hard to accomplish the milestone I set for myself with not give up attutude.",
+    "What describes you the best?": "Creative",
     "What is house DENVER to you?": "Virtual house away from college is Denver. We don't feel like we are really not in college together,just the medium has changed.we have conversations together ,discuss end number of topics,daily updates and our moderator Shreyansh has big role in making this place happening.",
     "Picture:": "https://drive.google.com/open?id=1vlzVR81oOdC_cH4ZdoM0bqPlADZ8PvIN"
   },
